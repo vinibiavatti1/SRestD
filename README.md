@@ -1,5 +1,5 @@
 # SRestD
-Create a documentation for your API parsing your JSON specification easyly.
+Create a documentation for your API parsing your JSON specification easily.
 
 ## Getting Started
 Download the repository to a server like Apache, etc... Access the project editor by "<server>/editor.html" and start to create! 
