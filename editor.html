@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Rest Doc</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <link rel="stylesheet" href="theme/cobalt.css">
+    <link rel="stylesheet" href="css/api.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="lib/codemirror.js"></script>
+    <script src="mode/javascript/javascript.js"></script>
+    <script src="addon/selection/active-line.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="left-box">
+            <textarea id="code-area" class="text-box grey darken-4 white-text" style="width: 100%; height: 100%;"></textarea>
+        </div>
+        <div class="right-box">
+            <div class="preview">
+                <div id="header"></div>
+                <div id="content"></div>
+                <br>
+                <div class="grey-text" id="credit"></div>
+            </div>
+        </div>
+    </main>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large blue darken-4">
+            <i class="large material-icons">menu</i>
+        </a>
+        <ul>
+            <li>
+                <a class="btn-floating blue darken-2" href="SRestD.7z" donwload>
+                    <i class="material-icons">vertical_align_bottom</i>
+                </a>
+            </li>
+            <li>
+                <a class="btn-floating blue darken-2" onclick="refresh()">
+                    <i class="material-icons">refresh</i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script>
+        var editor = null;
+        $(document).ready(function () {
+            $('.fixed-action-btn').floatingActionButton();
+            editor = CodeMirror.fromTextArea(document.getElementById("code-area"), {
+                lineNumbers: true,
+                matchBrackets: true,
+                styleActiveLine: true,
+                theme: "cobalt",
+                mode: "javascript"
+            });
+            editor.setSize('100%', '100%');
+
+            $.getJSON("api.json", function (json) {
+                editor.setValue(JSON.stringify(json, null, '   '));
+                createDoc();
+            });
+        });
+
+        function refresh() {
+            $("#content").empty();
+            createDoc(JSON.parse(editor.getValue()));
+        }
+    </script>
+</body>
+
+</html>

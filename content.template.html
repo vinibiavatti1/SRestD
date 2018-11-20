@@ -1,0 +1,91 @@
+ :SECTION_NAME
+<div onclick="collapse(':ID')" class="item cursor-pointer">
+    <span class="new badge :METHOD_COLOR left" style="margin-left: 0px; margin-right: 10px;" data-badge-caption="">:METHOD</span>
+    <b class=":DEPRECATED">:PORT</b>
+    <span class="grey-text" style="margin-left: 20px">:PORT_TITLE</span>
+    <i class="material-icons right">keyboard_arrow_down</i>
+</div>
+<div id="detail-:ID_DETAIL" class="item detail">
+    <b>:PORT_2</b>
+    <hr>
+    <span class="grey-text :DEPRECATED_LABEL">
+        <i>:TXT_DEPRECATED</i>
+        <br>
+    </span>
+    <span>:PORT_DESC</span>
+    <br>
+    <br>
+    <div class=":HEADER">
+        <b>:TXT_HEADER:</b>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>:TXT_HEADER_NAME</th>
+                    <th>:TXT_HEADER_TYPE</th>
+                    <th>:TXT_HEADER_DESC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>:HEADER_CONTENT</td>
+            </tbody>
+        </table>
+        <br>
+    </div>
+    <div class=":URL">
+        <b>:TXT_URL_PARAMS:</b>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>:TXT_URL_NAME</th>
+                    <th>:TXT_URL_TYPE</th>
+                    <th>:TXT_URL_DESC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>:URL_CONTENT</td>
+            </tbody>
+        </table>
+        <br>
+    </div>
+    <div class=":BODY">
+        <b>:TXT_BODY_REQUEST:</b>
+        <hr>
+        <span>:BODY_DESC</span>
+        <br>
+        <pre class="code-box">:BODY_JSON_MODEL:BODY_XML_MODEL</pre>
+        <b>:TXT_BODY_PARAMETERS:</b>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>:TXT_BODY_NAME</th>
+                    <th>:TXT_BODY_TYPE</th>
+                    <th>:TXT_BODY_DESC</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>:BODY_PARAMETERS</td>
+            </tbody>
+        </table>
+        <br>
+    </div>
+    <div class=":RESPONSES">
+        <b>:TXT_RESPONSES:</b>
+        <hr>
+        <table>
+            <thead>
+                <tr>
+                    <th>:TXT_RESPONSE_CODE</th>
+                    <th>:TXT_RESPONSE_DESC</th>
+                    <th>:TXT_RESPONSE_BODY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>:RESPONSES_CONTENT</td>
+            </tbody>
+        </table>
+        <br>
+    </div>
+</div>

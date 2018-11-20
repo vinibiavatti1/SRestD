@@ -1,0 +1,114 @@
+{
+    "locale": "en-US",
+    "title": "Simple Rest Doc",
+    "desc": "Documentação da API do produto SRestD",
+    "baseUrl": "http://teste.com.br ",
+    "version": "24-05-2018",
+    "contact": "teste@teste.com",
+    "license": {
+        "name": "Documentação API 2.2",
+        "url": "http://teste.com"
+    },
+    "paths": [{
+        "section": "Autenticação",
+        "path": "/auth",
+        "method": "GET",
+        "title": "Rotina de Autenticação",
+        "desc": "Serviço de autenticação do produto",
+        "deprecated": false,
+        "headers": [{
+                "name": "Authorization",
+                "type": "string",
+                "desc": "Token de autorização"
+            },
+            {
+                "name": "Content-Type",
+                "type": "string",
+                "desc": "application/json"
+            }
+        ],
+        "urlParameters": [{
+            "name": "user",
+            "type": "string",
+            "desc": "Usuário de autenticação"
+        }],
+        "body": {
+            "desc": "Teste de corpo",
+            "xmlModel": "<xml>\n\t<teste>teste</teste>\n</xml>",
+            "jsonModel": {
+                "nome": "string",
+                "email": "string"
+            },
+            "parameters": [{
+                    "name": "nome",
+                    "type": "string",
+                    "desc": "Nome do Usuário"
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "desc": "Email do Usuário"
+                }
+            ]
+        },
+        "responses": [{
+            "code": "200",
+            "desc": "Sucesso",
+            "xmlModel": "<xml>\n\t<teste>teste</teste>\n</xml>",
+            "jsonModel": {
+                "nome": "string",
+                "email": "string"
+            }
+        }]
+    }, {
+        "path": "/auth/{username}",
+        "method": "POST",
+        "title": "Rotina de Autenticação",
+        "desc": "Serviço de autenticação do produto",
+        "deprecated": false,
+        "headers": [{
+                "name": "Authorization",
+                "type": "string",
+                "desc": "Token de autorização"
+            },
+            {
+                "name": "Content-Type",
+                "type": "string",
+                "desc": "application/json"
+            }
+        ],
+        "urlParameters": [{
+            "name": "username",
+            "type": "string",
+            "desc": "Usuário de autenticação"
+        }],
+        "body": {
+            "desc": "Teste de corpo",
+            "xmlModel": "<xml>\n\t<teste>teste</teste>\n</xml>",
+            "jsonModel": {
+                "nome": "string",
+                "email": "string"
+            },
+            "parameters": [{
+                    "name": "nome",
+                    "type": "string",
+                    "desc": "Nome do Usuário"
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "desc": "Email do Usuário"
+                }
+            ]
+        },
+        "responses": [{
+            "code": "200",
+            "desc": "Sucesso",
+            "xmlModel": "<xml>\n\t<teste>teste</teste>\n</xml>",
+            "jsonModel": {
+                "nome": "string",
+                "email": "string"
+            }
+        }]
+    }]
+}
