@@ -3,7 +3,7 @@ Create a documentation for your API parsing your JSON specification easily.
 
 ## Getting Started
 1. Download the repository to a server like Apache, etc..;
-2. Access the project editor by "<server>/editor.html";
+2. Access the project editor by "server_url/editor.html";
 3. Start to create! 
 
 Editor:
